@@ -42,3 +42,7 @@ $("#btnMath2").click(function () {
     $("#mathInput5").val("");
     $("#mathOutput").text("");
 });
+
+$("#showcode").click(function () {
+    $("#codewindow").toggle();
+});

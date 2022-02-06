@@ -1,4 +1,4 @@
-﻿     <!-- Header -->
+﻿<!-- Header -->
 <header>
     <div class="container">
         <div class="row">
@@ -167,8 +167,8 @@
         </div>
     </div>
 </section>
- 
-    <!-- Portfolio Modals -->
+
+<!-- Portfolio Modals -->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -448,87 +448,133 @@
 
                 <div class="tab-content">
                     <div id="math" class="tab-pane fade in active">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <h5>In the Math exercise I am prompting a user (you..) to enter 5 numbers.</h5>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h5>In the Math exercise I am prompting a user (you..) to enter 5 numbers.</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Please enter number 1:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" placeholder="Enter number 1" id="mathInput1" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Please enter number 2:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" placeholder="Enter number 2" id="mathInput2" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Please enter number 3:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" placeholder="Enter number 3" id="mathInput3" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Please enter number 4:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" placeholder="Enter number 4" id="mathInput4" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        Please enter number 5:
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" placeholder="Enter number 5" id="mathInput5" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button id="btnMath1" class="btn btn-success">Calculate</button>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <button id="btnMath2" class="btn btn-success">Clear</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            Please enter number 1:
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="number" placeholder="Enter number 1" id="mathInput1" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            Please enter number 2:
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="number" placeholder="Enter number 2" id="mathInput2" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            Please enter number 3:
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="number" placeholder="Enter number 3" id="mathInput3" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            Please enter number 4:
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="number" placeholder="Enter number 4" id="mathInput4" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            Please enter number 5:
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="number" placeholder="Enter number 5" id="mathInput5" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <button id="btnMath1" class="btn btn-success">Calculate</button>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <button id="btnMath2" class="btn btn-success">Clear</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <p id="mathOutput"></p>
-                                </div>
-                            </div>                                 
-                    </div>
-                   
-                    <div id="factorial" class="tab-pane fade">
-                        <h3>Factorial</h3>
-                        <p>Some Factorial content.</p>
-                    </div>
-                    <div id="fizzbuzz" class="tab-pane fade">
-                        <h3>FizzBuzz</h3>
-                        <p>Some FizzBuzz content.</p>
-                    </div>
-                    <div id="palindrome" class="tab-pane fade">
-                        <h3>Palindrome</h3>
-                        <p>Some Palindrome content.</p>
+                            <div class="col-md-6">
+                                <p id="mathOutput"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button id="showcode" class="btn btn-success">Show Code</button>
+                            </div>
+                        </div>
+
+                        <div class="row"  id="codewindow" style="display:none">
+                            <div class="col-md-12">
+                                <pre class="brush: js">
+
+$("#btnMath1").click(function () {
+    //Step 1: Use jQuery to gather the user input
+    var input1 = Number($("#mathInput1").val());
+    var input2 = Number($("#mathInput2").val());
+    var input3 = Number($("#mathInput3").val());
+    var input4 = Number($("#mathInput4").val());
+    var input5 = Number($("#mathInput5").val());
+
+    //Step 2: Use JavaScript to work with the data
+
+    //Calculate the Sum
+    var sum = input1 + input2 + input3 + input4 + input5;
+
+    //Calculate the Product
+    var product = input1 * input2 * input3 * input4 * input5;
+
+    //Calculate the Mean (average)
+    var mean = sum / 5;
+
+    //Calculate the Min
+    var min = Math.min(input1, input2, input3, input4, input5);
+
+    //Calculate the Max
+    var max = Math.max(input1, input2, input3, input4, input5);
+
+    //Step 3: Use jQuery to output the results
+    var output = "The calculated sum is: " + sum + "<br>";
+    output += "The calculated product is: " + product + "<br>";
+    output += "The calculated mean is: " + mean + "<br>";
+    output += "The calculated min is: " + min + "<br>";
+    output += "The calculated max is: " + max;
+
+    $("#mathOutput").html(output);
+});
+                                    </pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            
+
+                <div id="factorial" class="tab-pane fade">
+                    <h3>Factorial</h3>
+                    <p>Some Factorial content.</p>
+                </div>
+                <div id="fizzbuzz" class="tab-pane fade">
+                    <h3>FizzBuzz</h3>
+                    <p>Some FizzBuzz content.</p>
+                </div>
+                <div id="palindrome" class="tab-pane fade">
+                    <h3>Palindrome</h3>
+                    <p>Some Palindrome content.</p>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
     </div>
 </div>
- 
